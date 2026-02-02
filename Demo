@@ -1,0 +1,28 @@
+import java.util.Scanner;
+public class Main {
+    public static void main(String[] args) {
+        Scanner scan = new Scanner(System.in);
+        int num1 = 0;
+        int num2 = 0;
+        boolean flag = true;
+        while (flag) {
+            System.out.println("Choose a enter your first number (non negative): ");
+            num1 = scan.nextInt();
+            System.out.println("Choose a enter your second number (non negative): ");
+            num2 = scan.nextInt();
+            if (num1 < 0 || num2 < 0 ){
+                System.out.println("Invalid input");
+            }
+            else {
+                flag = false;
+            }
+        }
+
+        for (int i = 0; i < num1; i++) {
+            for (int j = 0; j < num2; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+    }
+}
